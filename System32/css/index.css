@@ -4,3 +4,40 @@ main {
     padding-left: 15px;
     padding-right: 15px;
 }
+main > section {
+    -webkit-border-radius: 50px;
+-webkit-border-bottom-left-radius: 3px;
+-moz-border-radius: 50px;
+-moz-border-radius-bottomleft: 3px;
+border-radius: 50px;
+border-bottom-left-radius: 3px;
+min-height: 150px !important;
+overflow:auto !important;
+/*max-width: 60%;*/
+}
+main > section div:first-child{
+    -webkit-border-top-left-radius: 50px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 50px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 3px;
+    border-left: none;
+    
+}
+main > section div:nth-child(2){
+    -webkit-border-top-right-radius: 50px;
+    -webkit-border-bottom-right-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    -moz-border-radius-bottomright: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+}
+
+/*-webkit-border-radius: 50px;
+-webkit-border-bottom-left-radius: 3px;
+-moz-border-radius: 50px;
+-moz-border-radius-bottomleft: 3px;
+border-radius: 50px;
+border-bottom-left-radius: 3px;*/
