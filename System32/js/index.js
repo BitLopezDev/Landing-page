@@ -166,13 +166,103 @@ function cargarBadges() {
 
 cargarBadges();
 
+function NextUaccordionUI(WhatToShide) {
+    if (WhatToShide > 2) {
+        return new Error('Wrong value assigned to function accordionUI');
+    }
+    const elementsofaccordion = {
+        primerCertifcado: {
+            div: 'primerCertifcado',
+            li: 'LIprimerCertifcado'
+
+        },
+        NextUFrontend: {
+            div: 'NextUFrontend',
+            li: 'LINextUFrontend'
+        },
+        NextUotros: {
+            div: 'NextUotros',
+            li: 'LINextUotros'
+        },
+    }
+    //console.log(elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].div);
+    //page-item
+    //divAccordion
+    var gradiente = `: linear-gradient(90deg, rgba(27, 164, 216, 1) 0%, rgba(67, 127, 227, 1) 35%, rgba(151, 53, 252, 1) 100%) !important;`;
+    for (let i = 0; i < 3; i++) {
+        /*let LIs = [];
+        LIs.push(elementsofaccordion[Object.keys(elementsofaccordion)[i]].li);*/
+        //console.log(LIs);
+        console.log(i);
+        //document.getElementById(LIs[i]).classList.remove('active');
+        document.getElementById(elementsofaccordion[Object.keys(elementsofaccordion)[i]].li).classList.remove('active');
+
+        document.getElementById(elementsofaccordion[Object.keys(elementsofaccordion)[i]].div).classList.add('seesconde');
+    }
+    //let itemAccoirdion = document.getElementsByClassName('itemAccoirdion');
+
+
+    //itemAccoirdion.classList.remove('active');
+    document.getElementById(`${elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].li}`).setAttribute('class', 'active');
+
+    //document.getElementsByClassName('divAccordion').setAttribute('class', 'seesconde');
+    document.getElementById(`${elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].div}`).classList.remove('seesconde');
+
+}
+
+
+
+function PlatziaccordionUI(WhatToShide) {
+    if (WhatToShide > 2) {
+        return new Error('Wrong value assigned to function PlatziaccordionUI');
+    }
+    const elementsofaccordion = {
+        DesWeb: {
+            div: 'DesWeb',
+            li: 'LIPlatziDesWeb'
+
+        },
+        PlatziSeguridad: {
+            div: 'PlatziSeguridad',
+            li: 'LIPlatziSeguridad'
+        },
+        PlatziData: {
+            div: 'PlatziData',
+            li: 'LIPlatziData'
+        },
+    }
+    //console.log(elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].div);
+    //page-item
+    //divAccordion
+    var gradiente = `: linear-gradient(90deg, rgba(27, 164, 216, 1) 0%, rgba(67, 127, 227, 1) 35%, rgba(151, 53, 252, 1) 100%) !important;`;
+    for (let i = 0; i < 3; i++) {
+        /*let LIs = [];
+        LIs.push(elementsofaccordion[Object.keys(elementsofaccordion)[i]].li);*/
+        //console.log(LIs);
+        console.log(i);
+        //document.getElementById(LIs[i]).classList.remove('active');
+        document.getElementById(elementsofaccordion[Object.keys(elementsofaccordion)[i]].li).classList.remove('active');
+
+        document.getElementById(elementsofaccordion[Object.keys(elementsofaccordion)[i]].div).classList.add('seesconde');
+    }
+    //let itemAccoirdion = document.getElementsByClassName('itemAccoirdion');
+
+
+    //itemAccoirdion.classList.remove('active');
+    document.getElementById(`${elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].li}`).setAttribute('class', 'active');
+
+    //document.getElementsByClassName('divAccordion').setAttribute('class', 'seesconde');
+    document.getElementById(`${elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].div}`).classList.remove('seesconde');
+
+}
 
 
 
 
 
-    //console.log(` iFromWhile: ${iFromWhile}, badge3Math: ${badge3Math}, badge2Math: badge2Math: ${badge2Math}, ${badge1Math}`);
-    // 
+
+//console.log(` iFromWhile: ${iFromWhile}, badge3Math: ${badge3Math}, badge2Math: badge2Math: ${badge2Math}, ${badge1Math}`);
+// 
 /*  
 if (badge1Math === 1 || badge2Math ===1){
 
@@ -189,3 +279,185 @@ console.log(badgesObject[Object.keys(badgesObject)[0]].route);
 
 
 */
+
+function OpenModalPlatzi(course) {
+    let Course = course;
+
+    const FullStackObj = {
+        course1: {
+            title: 'Curso de Prework: Configuración de Entorno de Desarrollo en Windows',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course2: {
+            title: 'Curso de  Prework: Configuración de Entorno de Desarrollo en Linux',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course3: {
+            title: 'Curso de Prework: Configuración de Entorno de Desarrollo en macOS',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course4: {
+            title: 'Curso de Introducción a la Terminal y Línea de Comandos',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course5: {
+            title: 'Curso Profesional de Git y GitHub',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course6: {
+            title: 'Curso de Frontend Developer',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course7: {
+            title: 'Curso Práctico de Frontend Developer',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course8: {
+            title: 'Curso Básico de JavaScript',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course9: {
+            title: 'Curso Práctico de JavaScript',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course10: {
+            title: 'Curso de ECMAScript: Historia y Versiones de JavaScript',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course11: {
+            title: 'Curso de Asincronismo con JavaScript',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course12: {
+            title: 'Curso de NPM: Gestión de Paquetes y Dependencias en JavaScript',
+            completion: 100,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course13: {
+            title: 'Curso de Webpack',
+            completion: 54,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course14: {
+            title: 'Curso Práctico de React.js',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course15: {
+            title: 'Curso Práctico de Next.js',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course16: {
+            title: 'Curso Profesional de Next.js',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course17: {
+            title: 'Curso para Conseguir Trabajo como Frontend Developer',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course18: {
+            title: 'Curso de Fundamentos de Bases de Datos',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course19: {
+            title: 'Curso de Fundamentos de Node.js',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course20: {
+            title: 'Curso de Backend con Node.js: API REST con Express.js',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course21: {
+            title: 'Curso de Backend con Node.js: Base de Datos con PostgreSQL',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+        course22: {
+            title: 'Curso de Backend con Node.js: Autenticación con Passport.js y JWT',
+            completion: 0,
+            belongs: 'Full Stack Developer',
+            howMany: 22,
+        },
+
+
+    }
+
+    if (Course === 0) {
+        document.getElementById('ModalTitle').innerText = `Cursos de ${FullStackObj[Object.keys(FullStackObj)[0]].belongs}`;
+        let WhatIsWritten = `<h4>Cursos de la Ruta:</h4>`;
+        for (let i = 0; i < FullStackObj[Object.keys(FullStackObj)[0]].howMany; i++) {
+            /*let LIs = [];
+            LIs.push(FullStackObj[Object.keys(FullStackObj)[i]].li);*/
+            //console.log(LIs);
+            //console.log(i);
+            console.log(FullStackObj[Object.keys(FullStackObj)[0]].howMany);
+            //document.getElementById(LIs[i]).classList.remove('active');
+            WhatIsWritten = WhatIsWritten += `<h5>${FullStackObj[Object.keys(FullStackObj)[i]].title}</h5>
+            <div class="progress">
+              <div class="progress-bar" style="width:${FullStackObj[Object.keys(FullStackObj)[i]].completion}%">${FullStackObj[Object.keys(FullStackObj)[i]].completion}%</div>
+            </div>`;
+
+        }
+        document.getElementById('courses').innerHTML = WhatIsWritten;
+
+    } else {
+        return alert('No hice los demás');
+    }
+
+
+    document.getElementById("abrirModal").click();
+
+    /*
+    PlatziData
+    PlatziSeguridad
+    PlatziDesWeb
+    
+    <h4>Cursos de la Ruta:</h4>
+                  <h5>Curso 1</h5>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:100%">100%</div>
+                  </div>
+        */
+    //ModalTitle
+    //ModalP
+    //ModalStrong
+
+}

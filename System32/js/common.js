@@ -29,6 +29,7 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
      ${str}
      Verifique la consola para más información.`;
     document.getElementById("ActualAlert").classList.add("alert-danger");
+    document.getElementById('ActualAlert').classList.remove('active');
 
     document.getElementById("abrirModal").click();
     /*Por un bug cuando inteto abrir el modal no puedo, entonces me ví 

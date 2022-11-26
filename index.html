@@ -20,7 +20,9 @@
   <script crossorigin defer src="./System32/js/common.js" type="module"></script>
   <script defer src="./System32/js/index.js" type="text/javascript"></script>
 
-  <script defer src="./System32/Lib/js/bootstrap.js" type="text/javascript"></script>
+
+  <script defer src="./System32/Lib/js/bootstrap.bundle.js" type="text/javascript"></script>
+
   <script defer src="./System32/Lib/js/jquery-3.6.1.min.js" type="text/javascript"></script>
 
 
@@ -32,7 +34,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm  fixed-top fondogradiente  ">
+    <nav class="navbar navbar-expand-sm  fixed-top fondoantigradiente  ">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="./Users/Santiago/imágenes/Negro.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
@@ -72,21 +74,36 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
+            <h4 class="modal-title" id="ModalTitle">Cursos de Full Stack Developer</h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
-            <div id='ActualAlert' class="alert">
-              <strong>Success!</strong> Indicates a successful or positive action.
+
+            <div id="courses">
+              <h4>Cursos de la Ruta:</h4>
+              <h5>Curso 1</h5>
+              <div class="progress">
+                <div class="progress-bar" style="width:100%">100%</div>
+              </div>
+
+              <h5>Curso 2</h5>
+              <div class="progress">
+                <div class="progress-bar" style="width:54%">54%</div>
+              </div>
             </div>
+            <div id='ActualAlert' class="alert seesconde">
+              <strong id="ModalStrongAlert"></strong>
+              <p id="ModalPAlrt"></p>
+            </div>
+
           </div>
 
           <!-- Modal footer -->
           <div class="modal-footer">
             <button id='cerrarModal' type="button" class="btn btn-danger" data-bs-dismiss="modal"
-              onclick="">Close</button>
+              onclick="">Cerar</button>
           </div>
 
         </div>
@@ -105,14 +122,16 @@
 
     <!--First block-->
     <center>
-    <div class="row justify-content-center">
-      <div class="col-sm-3 " style="max-width: 290px; ">
-        <h2 style="text-align:center !important; padding-bottom: 5px; float: left !important; padding-left: 0; margin-left: 0;">Lo elemental:</h2>
+      <div class="row justify-content-center">
+        <div class="col-sm-3 " style="max-width: 290px; ">
+          <h2
+            style="text-align:center !important; padding-bottom: 5px; float: left !important; padding-left: 0; margin-left: 0;">
+            Quién soy:</h2>
+        </div>
+        <div class="col-sm-3 " style="max-width: 280px; min-height: 30px ;"></div>
       </div>
-      <div class="col-sm-3 " style="max-width: 280px; min-height: 30px ;"></div>
-    </div>
-  </center>
-    <section class="row justify-content-center  ">
+    </center>
+    <section id="section1" class="row justify-content-center  ">
 
       <div id="carouselcontainer" class="col-sm-3  fondoantigradiente justify-content-center"
         style="min-height: 160px ; padding-top:  30px; max-width: 280px;">
@@ -183,13 +202,384 @@
             <li><b>Nivel de educación:</b> Dos bachilleratos</li>
             <li><b>Formación técnica:</b> Programación</li>
             <li><b>Objetivo: </b> Trabajar como desarrollador</li>
-            
+
 
           </ul>
         </center>
 
       </div>
     </section>
+    <br>
+    <center>
+      <div class=" ">
+        <div class=" " style="max-width: 290px; ">
+          <h2
+            style="text-align:center !important; padding-bottom: 5px; float: left !important; padding-left: 0; margin-left: 0;">
+            Estudios Técnicos</h2>
+        </div>
+        <div class=" " style="max-width: 280px; min-height: 30px ;"></div>
+      </div>
+    </center>
+    <br>
+
+    <section id="section2" class="row"
+      style=" display: flex; width: 100% ; display: block !important; position: absolute; margin:0;">
+
+      <div id="accordion" class="col-sm-4"
+        style="min-width: 80%; display: inline-block !important; padding-left:  15%; padding-right:  auto; position: relative; ">
+
+        <div class="card">
+          <div class="card-header" data-bs-toggle="collapse" href="#collapseOne">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+              Estudios en NextU
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <section class="card-body">
+              <div id="NextULis">
+                <div id="paginationNextUFrontEnd">
+                  <ul class="pagination">
+
+                    <li class="page-item itemAccoirdion" id="LIprimerCertifcado" onclick="NextUaccordionUI(0);"><a
+                        class="page-link ">Desarrollador Web (2016)</a></li>
+                    <li class="page-item active itemAccoirdion" id="LINextUFrontend" onclick="NextUaccordionUI(1);"><a
+                        class="page-link">Desarrollador Frontend con JS </a></li>
+                    <li class="page-item itemAccoirdion" id="LINextUotros" onclick="NextUaccordionUI(2);"><a
+                        class="page-link">Otros estudios </a></li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <!--1°Certificado-->
+              <div id="primerCertifcado" class="seesconde divAccordion">
+                <div id="tituloprimerCertifcado">
+                  <h4>Desarrollador Web:</h4>
+                </div>
+                <div id="descripcionprimerCertifcado">
+
+                  <div class="cursoAccordion justify-content-start">
+
+                  </div>
+
+                  <div class="">
+                    <div class="progress">
+                      <div class="progress-bar fondogradiente" style="width: 100%;">100%</div>
+                    </div>
+                  </div>
+
+                  <h5 style="padding-top:  10px ;">Aglunos módulos del curso:</h5>
+
+                  <center>
+                    <div id="Badges" class="">
+                      <div class="row">
+                        <div class="container mt-3 col-sm-4">
+                          <div class="card border-0" style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/HTML5.png" alt="HTML 5"
+                              style="width:100%">
+
+                          </div>
+
+                        </div>
+
+                        <div class="container mt-3 col-sm-4 ">
+                          <div class="card border-0" style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/CSS3.png" alt="CSS 3"
+                              style="width:100%">
+
+                          </div>
+
+                        </div>
+                        <div class="container mt-3 col-sm-4 ">
+                          <div class="card border-0" style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/JavaScript.png"
+                              alt="JavaScript" style="width:100%">
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <hr>
+
+                      <div class="row">
+                        <div class="container mt-3  col-sm-3">
+                          <div class="card border-0" style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/jQuery_básico.png"
+                              alt="jQuery" style="width:100%">
+
+                          </div>
+
+                        </div>
+
+                        <div class="container mt-3 col-sm-3">
+                          <div class="card border-0" style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/jQuery_UI_-_Web.png"
+                              alt="jQuery UI" style="width:100%">
+
+                          </div>
+
+                        </div>
+                        <div class="container mt-3 col-sm-3">
+                          <div class="card border-0" style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/PHP_OOP.png"
+                              alt="PHP OOP 5" style="width:100%">
+
+                          </div>
+
+                        </div>
+
+                        <div class="container mt-3 col-sm-3 ">
+                          <div class="card border-0 " style="max-width: 100px;">
+                            <img class="card-img-top" src="./Users/Santiago/credenciales/NextU/XML.png" alt="XML"
+                              style="width:100%">
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </center>
+
+
+                </div>
+                <!--</div id="primerCertifcado">-->
+
+
+
+
+
+
+              </div>
+
+              <!--NextUFrontend-->
+              <div id="NextUFrontend" class="divAccordion">
+                <div id="tituloNextUFrontEnd">
+                  <h4>Frontend con Javascript:</h4>
+                </div>
+                <div id="descripcionNextUFrontEnd">
+
+                  <!---->
+                  <div class="cursoAccordion justify-content-start">
+                    <p>Curso de Desarrollador Frontend con Javascript completado al:</p>
+                  </div>
+                  <div class="">
+                    <div class="progress">
+                      <div class="progress-bar fondogradiente" style="width: 100%;">100%</div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="card border-0" style="width:auto;">
+                    <img class="card-img-top"
+                      src="./Users/Santiago/credenciales/NextU/Nuevas credenciales/certificadoFrontendJavascript.png"
+                      alt="Certificado de Desarrollador Frontend con Javascript">
+                    <div class="card-body">
+                      <h4 class="card-title">Certificado de Desarrollador Frontend con Javascript</h4>
+                      <p class="card-text">Explicación</p>
+                      <a href="https://www.credential.net/024265d2-0d91-4c00-b8a6-08d7c8b19fef"
+                        class="btn fondogradiente border-0" target="_blank">Ver certificado</a>
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+              </div>
+              <!--</div id="NextUFrontend">-->
+
+
+              <!--NextUotros-->
+              <div id="NextUotros" class="seesconde divAccordion">
+                <div id="tituloNextUotros">
+                  <h4>Otros cursos en NextU:</h4>
+                </div>
+                <div id="descripcionNextUotros">
+
+                  <div class="cursoAccordion justify-content-start">
+                    <p>Cursos adicionales</p>
+                  </div>
+                  <div class=" " style="color:black;">
+                    <a class="btn fondoniceblue border-0 "
+                      href="https://www.credential.net/5b308137-854e-4d5b-8df3-e8f260ecb065"
+                      target="_blank">Herramientas de seguridad</a>
+                    <a class="btn fondoniceblue border-0 "
+                      href="https://www.credential.net/9f2a679f-fd77-4dbd-ab69-e4e788709300" target="_blank">Hardware
+                      del computador</a>
+                    <a class="btn fondoniceblue border-0 "
+                      href="https://www.credential.net/b94c958e-df5c-4de4-843e-7596230a6851" target="_blank">Soporte
+                      técnico y troubleshooting</a>
+                    <a class="btn fondoniceblue border-0 "
+                      href="https://www.credential.net/57163fba-f91b-4939-81b8-43deb9dfecac" target="_blank">Software y
+                      sistemas operativos</a>
+                    <a class="btn fondoniceblue border-0 "
+                      href="https://www.credential.net/profile/santiagocomesanalopez/wallet" target="_blank">Vea todos
+                      mis cursos de NextU</a>
+
+                  </div>
+
+
+
+
+                </div>
+
+              </div>
+
+              <!--</div id="NextUotros">-->
+
+            </section>
+
+
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-header" data-bs-toggle="collapse" href="#collapseTwo">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+              Estudios que curso en Platzi
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+            <section class="card-body">
+
+
+              <div id="PlatziLis">
+                <div id="paginationPlatziSeguridad">
+                  <ul class="pagination">
+
+                    <li class="page-item itemAccoirdion" id="LIPlatziDesWeb" onclick="PlatziaccordionUI(0);"><a
+                        class="page-link ">Desarrollador Web y más</a></li>
+                    <li class="page-item active itemAccoirdion" id="LIPlatziSeguridad" onclick="PlatziaccordionUI(1);">
+                      <a class="page-link">Seguridad Informática </a>
+                    </li>
+                    <li class="page-item itemAccoirdion" id="LIPlatziData" onclick="PlatziaccordionUI(2);"><a
+                        class="page-link">Analista de Datos </a></li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <!--1°Certificado-->
+              <div id="DesWeb" class="seesconde divAccordion">
+                <div id="tituloDesWeb">
+                  <h4>Desarrollador Web y más</h4>
+                </div>
+                <div id="descripcionDesWeb">
+
+                  <div class="cursoAccordion justify-content-start">
+
+                  </div>
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary " onclick="OpenModalPlatzi(0);">
+                      Desarrollador Full Stack
+                    </button>
+
+                  </div>
+                  <br>
+                  <div class="">
+                    <div class="progress">
+                      <div class="progress-bar fondogradiente" style="width: 39%;">39%</div>
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <!--</div id="DesWeb">-->
+
+
+
+
+
+
+              </div>
+
+              <!--PlatziSeguridad-->
+              <div id="PlatziSeguridad" class="divAccordion">
+                <div id="tituloPlatziSeguridad">
+                  <h4>Seguridad Informática:</h4>
+                </div>
+                <div id="descripcionPlatziSeguridad">
+
+                  <!---->
+                  <div class="cursoAccordion justify-content-start">
+                    <p>Curso de Seguridad Informática</p>
+                  </div>
+                  <div class="">
+                    <div class="progress">
+                      <div class="progress-bar fondogradiente" style="width: 0%;">0%</div>
+                    </div>
+                  </div>
+
+                  <br>
+
+
+
+
+
+                </div>
+
+              </div>
+              <!--</div id="PlatziSeguridad">-->
+
+
+              <!--PlatziData-->
+              <div id="PlatziData" class="seesconde divAccordion">
+                <div id="tituloPlatziData">
+                  <h4>Analisa de Datos</h4>
+                </div>
+                <div id="descripcionPlatziData">
+
+                  <div class="cursoAccordion justify-content-start">
+                    <p>Curso de Analisa de Datos</p>
+                  </div>
+
+                  <div class="">
+                    <div class="progress">
+                      <div class="progress-bar fondogradiente" style="width: 0%;">0%</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <!--</div id="PlatziData">-->
+
+
+
+
+              <!--End of .card-body-->
+            </section>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-header" data-bs-toggle="collapse" href="#collapseThree">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+              Estudios que quisiera cursar algún día:
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum..
+            </div>
+          </div>
+        </div>
+
+        <!--</div id="accordion">-->
+      </div>
+
+
+    </section>
+    <br><br>
+
 
     <br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

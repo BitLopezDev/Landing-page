@@ -6,7 +6,7 @@ main {
     color: black;
 }
 
-main>section {
+/*main> {
     -webkit-border-radius: 50px;
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-radius: 50px;
@@ -15,10 +15,11 @@ main>section {
     border-bottom-left-radius: 3px;
     min-height: 150px !important;
     overflow: auto !important;
-    /*max-width: 60%;*/
+   
 }
+*/
 
-main>section div:first-child {
+main>#section1>div:first-child {
     -webkit-border-top-left-radius: 50px;
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-radius-topleft: 50px;
@@ -29,7 +30,7 @@ main>section div:first-child {
 
 }
 
-main>section div:nth-child(2) {
+main>#section1>div:nth-child(2) {
     -webkit-border-top-right-radius: 50px;
     -webkit-border-bottom-right-radius: 50px;
     -moz-border-radius-topright: 50px;
@@ -53,6 +54,23 @@ ul li {
 
 }
 
+#descripcionNextUotros div a {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+
+/*.cursoAccordion p{
+    align-self: left;
+    justify-content: left;
+ }
+ .cursoAccordion{
+    align-items: left !important;
+ }*/
+
+
+
 /*ul li:nth-child(4){
     float:left;
     padding-left: 0;
@@ -66,6 +84,15 @@ ul li {
     section .row {
         transform: rotate(90deg);
     }
+}
+
+@media screen and (min-with:550px) {
+    #accordion {
+        color: red;
+        min-width: 80% !important;
+        max-width: 85% !important;
+    }
+
 }
 
 /*-webkit-border-radius: 50px;
