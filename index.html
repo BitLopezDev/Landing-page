@@ -94,85 +94,99 @@
     </div>
     <!--</div id="modales">-->
   </div>
-
+  <button type="button" id='abrirModal' class="btn btn-primary seesconde" data-bs-toggle="modal"
+    data-bs-target="#ElModal">
+    Open modal
+  </button>
 
   <!--Fin de modal-->
 
   <main>
 
-    <!--Hola-->
-        <button type="button" id='abrirModal' class="btn btn-primary seesconde" data-bs-toggle="modal" data-bs-target="#ElModal">
-                Open modal
-              </button>
+    <!--First block-->
+    <center>
+    <div class="row justify-content-center">
+      <div class="col-sm-3 " style="max-width: 290px; ">
+        <h2 style="text-align:center !important; padding-bottom: 5px; float: left !important; padding-left: 0; margin-left: 0;">Lo elemental:</h2>
+      </div>
+      <div class="col-sm-3 " style="max-width: 280px; min-height: 30px ;"></div>
+    </div>
+  </center>
     <section class="row justify-content-center  ">
 
-      <div id="carouselcontainer" class="col-sm-3  fondoantigradiente justify-content-center" style="min-height: 160px ; padding-top:  30px; max-width: 280px;">
+      <div id="carouselcontainer" class="col-sm-3  fondoantigradiente justify-content-center"
+        style="min-height: 160px ; padding-top:  30px; max-width: 280px;">
         <center>
           <!-- Carousel -->
-<div id="badges" class="carousel slide" data-bs-ride="carousel" style="min-height: 160px ; ">
+          <div id="badges" class="carousel slide" data-bs-ride="carousel" style="min-height: 160px ; ">
 
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#badges" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#badges" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#badges" data-bs-slide-to="2"></button>
-  </div>
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner " style="min-height: 160px ; ">
-    <div id="carousel-item-1" class="carousel-item active">
-      <center>
-      <img id="carouselIMG1" src="./Users/Santiago/credenciales/NextU/PHP_OOP.png" alt="PHP OOP" class="d-block" style="width:120px; height:120px;">
-    </center>
-    </div>
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#badges" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#badges" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#badges" data-bs-slide-to="2"></button>
+            </div>
 
-    <div class="carousel-item  " id="carousel-item-2">
-      <center>
-      <img id="carouselIMG2" src="./Users/Santiago/credenciales/NextU/HTML5.png" alt="HTML 5" class="d-block" style="width:120px; height:120px;">
-    </center>
-    </div>
-    <div class="carousel-item" id="carousel-item-3">
-      <center>
-      <img id="carouselIMG3" src="./Users/Santiago/credenciales/NextU/JavaScript.png" alt="JavaScript" class="d-block" style="width:120px; height:120px;">
-    </center>
-    </div>
-    
-  
-   
-<!-- 
-  <div class="carousel-item">
-      <center>
-      <img src="./Users/Santiago/credenciales/NextU/jQuery_UI_-_Web.png" alt="jQuery" class="d-block" style="width:120px; height:120px;">
-    </center>
-    </div>
-    
-    <div class="carousel-item">
-      <center>
-      <img src="./Users/Santiago/credenciales/NextU/XML.png" alt="Los Angeles" class="d-block" style="width:120px; height:120px;">
-    </center>
-    </div>
-  -->
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button id="carouselPrevious" class="carousel-control-prev" type="button" data-bs-target="#badges" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button id="carouselNext" class="carousel-control-next" type="button" data-bs-target="#badges" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner " style="min-height: 160px ; ">
+              <div id="carousel-item-1" class="carousel-item active">
+                <center>
+                  <img id="carouselIMG1" src="./Users/Santiago/credenciales/NextU/PHP_OOP.png" alt="PHP OOP"
+                    class="d-block" style="width:120px; height:120px;">
+                </center>
+              </div>
 
-<div class="container-fluid mt-3">
-  <!--<h3>Carousel Example</h3>
-  <p>The following example shows how to create a basic carousel with indicators and controls.</p>-->
-</div>
-</center>
+              <div class="carousel-item  " id="carousel-item-2">
+                <center>
+                  <img id="carouselIMG2" src="./Users/Santiago/credenciales/NextU/HTML5.png" alt="HTML 5"
+                    class="d-block" style="width:120px; height:120px;">
+                </center>
+              </div>
+              <div class="carousel-item" id="carousel-item-3">
+                <center>
+                  <img id="carouselIMG3" src="./Users/Santiago/credenciales/NextU/JavaScript.png" alt="JavaScript"
+                    class="d-block" style="width:120px; height:120px;">
+                </center>
+              </div>
 
+
+
+            </div>
+
+
+
+            <!-- Left and right controls/icons -->
+            <button id="carouselPrevious" class="carousel-control-prev" type="button" data-bs-target="#badges"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button id="carouselNext" class="carousel-control-next" type="button" data-bs-target="#badges"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="container-fluid mt-3">
+            <!--<h3>Carousel Example</h3>
+        <p>The following example shows how to create a basic carousel with indicators and controls.</p>-->
+          </div>
+        </center>
+        <!--</div id="carouselcontainer">-->
       </div>
 
-      <div class="col-sm-3 fondogradiente justify-content-center" >
+      <div class="col-sm-3 fondogradiente justify-content-center">
+        <center>
+          <h4 style="padding-top:15px;">Sobre mí:</h4>
+          <ul>
+            <li><b>Nombre: </b>Santiago Comesaña López</li>
+            <li><b>Fcha de nacimiento: </b> 15/06/2002</li>
+            <li><b>Nivel de educación:</b> Dos bachilleratos</li>
+            <li><b>Formación técnica:</b> Programación</li>
+            <li><b>Objetivo: </b> Trabajar como desarrollador</li>
+            
 
+          </ul>
+        </center>
 
       </div>
     </section>

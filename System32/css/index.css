@@ -1,21 +1,24 @@
 main {
-    padding-top: 75px ;
-    padding-bottom: 75px ;
+    padding-top: 100px;
+    padding-bottom: 75px;
     padding-left: 15px;
     padding-right: 15px;
+    color: black;
 }
-main > section {
+
+main>section {
     -webkit-border-radius: 50px;
--webkit-border-bottom-left-radius: 3px;
--moz-border-radius: 50px;
--moz-border-radius-bottomleft: 3px;
-border-radius: 50px;
-border-bottom-left-radius: 3px;
-min-height: 150px !important;
-overflow:auto !important;
-/*max-width: 60%;*/
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius: 50px;
+    -moz-border-radius-bottomleft: 3px;
+    border-radius: 50px;
+    border-bottom-left-radius: 3px;
+    min-height: 150px !important;
+    overflow: auto !important;
+    /*max-width: 60%;*/
 }
-main > section div:first-child{
+
+main>section div:first-child {
     -webkit-border-top-left-radius: 50px;
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-radius-topleft: 50px;
@@ -23,16 +26,46 @@ main > section div:first-child{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 3px;
     border-left: none;
-    
+
 }
-main > section div:nth-child(2){
+
+main>section div:nth-child(2) {
     -webkit-border-top-right-radius: 50px;
     -webkit-border-bottom-right-radius: 50px;
     -moz-border-radius-topright: 50px;
     -moz-border-radius-bottomright: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    
+
+}
+
+ul {
+    align-items: left;
+}
+
+ul li {
+    float: left;
+    padding-left: 0;
+    margin-left: 0;
+    align-self: left;
+    height: auto;
+    line-height: auto;
+
+}
+
+/*ul li:nth-child(4){
+    float:left;
+    padding-left: 0;
+    margin-left: 0;
+    align-self: left;
+    height: 25px;
+    line-height: 80px;
+
+}*/
+@media (max-with: 840px) {
+    section .row {
+        transform: rotate(90deg);
+    }
 }
 
 /*-webkit-border-radius: 50px;

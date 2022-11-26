@@ -5,9 +5,10 @@
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core')) :
-  typeof define === 'function' && define.amd ? define(['@popperjs/core'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrap = factory(global.Popper));
-})(this, (function (Popper) { 'use strict';
+    typeof define === 'function' && define.amd ? define(['@popperjs/core'], factory) :
+      (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrap = factory(global.Popper));
+})(this, (function (Popper) {
+  'use strict';
 
   function _interopNamespace(e) {
     if (e && e.__esModule) return e;
@@ -217,7 +218,7 @@
     return findShadowRoot(element.parentNode);
   };
 
-  const noop = () => {};
+  const noop = () => { };
   /**
    * Trick to restart an element's animation
    *
@@ -775,7 +776,8 @@
     _mergeConfigObj(config, element) {
       const jsonConfig = isElement(element) ? Manipulator.getDataAttribute(element, 'config') : {}; // try to parse
 
-      return { ...this.constructor.Default,
+      return {
+        ...this.constructor.Default,
         ...(typeof jsonConfig === 'object' ? jsonConfig : {}),
         ...(isElement(element) ? Manipulator.getDataAttributes(element) : {}),
         ...(typeof config === 'object' ? config : {})
@@ -812,7 +814,7 @@
    */
 
   class BaseComponent extends Config {
-    constructor(element, config) {
+    constructor (element, config) {
       super();
       element = getElement(element);
 
@@ -1150,7 +1152,7 @@
    */
 
   class Swipe extends Config {
-    constructor(element, config) {
+    constructor (element, config) {
       super();
       this._element = element;
 
@@ -1320,7 +1322,7 @@
    */
 
   class Carousel extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config);
       this._interval = null;
       this._activeElement = null;
@@ -1740,7 +1742,7 @@
    */
 
   class Collapse extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config);
       this._isTransitioning = false;
       this._triggerArray = [];
@@ -2056,7 +2058,7 @@
    */
 
   class Dropdown extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config);
       this._popper = null;
       this._parent = this._element.parentNode; // dropdown wrapper
@@ -2288,7 +2290,8 @@
         }];
       }
 
-      return { ...defaultBsPopperConfig,
+      return {
+        ...defaultBsPopperConfig,
         ...(typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig)
       };
     }
@@ -2439,7 +2442,7 @@
    */
 
   class ScrollBarHelper {
-    constructor() {
+    constructor () {
       this._element = document.body;
     } // Public
 
@@ -2574,7 +2577,7 @@
    */
 
   class Backdrop extends Config {
-    constructor(config) {
+    constructor (config) {
       super();
       this._config = this._getConfig(config);
       this._isAppended = false;
@@ -2717,7 +2720,7 @@
    */
 
   class FocusTrap extends Config {
-    constructor(config) {
+    constructor (config) {
       super();
       this._config = this._getConfig(config);
       this._isActive = false;
@@ -2842,7 +2845,7 @@
    */
 
   class Modal extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config);
       this._dialog = SelectorEngine.findOne(SELECTOR_DIALOG, this._element);
       this._backdrop = this._initializeBackDrop();
@@ -3215,7 +3218,7 @@
    */
 
   class Offcanvas extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config);
       this._isShown = false;
       this._backdrop = this._initializeBackDrop();
@@ -3588,7 +3591,7 @@
    */
 
   class TemplateFactory extends Config {
-    constructor(config) {
+    constructor (config) {
       super();
       this._config = this._getConfig(config);
     } // Getters
@@ -3618,7 +3621,8 @@
     changeContent(content) {
       this._checkContent(content);
 
-      this._config.content = { ...this._config.content,
+      this._config.content = {
+        ...this._config.content,
         ...content
       };
       return this;
@@ -3789,7 +3793,7 @@
    */
 
   class Tooltip extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       if (typeof Popper__namespace === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
       }
@@ -4025,7 +4029,8 @@
       if (this._templateFactory) {
         this._templateFactory.changeContent(content);
       } else {
-        this._templateFactory = new TemplateFactory({ ...this._config,
+        this._templateFactory = new TemplateFactory({
+          ...this._config,
           // the `content` var has to be after `this._config`
           // to override config.content in case of popover
           content,
@@ -4119,7 +4124,8 @@
           }
         }]
       };
-      return { ...defaultBsPopperConfig,
+      return {
+        ...defaultBsPopperConfig,
         ...(typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig)
       };
     }
@@ -4227,7 +4233,8 @@
         }
       }
 
-      config = { ...dataAttributes,
+      config = {
+        ...dataAttributes,
         ...(typeof config === 'object' && config ? config : {})
       };
       config = this._mergeConfigObj(config);
@@ -4327,14 +4334,16 @@
   const NAME$3 = 'popover';
   const SELECTOR_TITLE = '.popover-header';
   const SELECTOR_CONTENT = '.popover-body';
-  const Default$2 = { ...Tooltip.Default,
+  const Default$2 = {
+    ...Tooltip.Default,
     content: '',
     offset: [0, 8],
     placement: 'right',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>',
     trigger: 'click'
   };
-  const DefaultType$2 = { ...Tooltip.DefaultType,
+  const DefaultType$2 = {
+    ...Tooltip.DefaultType,
     content: '(null|string|element|function)'
   };
   /**
@@ -4446,7 +4455,7 @@
    */
 
   class ScrollSpy extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config); // this._element is the observablesContainer and config.target the menu links wrapper
 
       this._targetLinks = new Map();
@@ -4731,7 +4740,7 @@
    */
 
   class Tab extends BaseComponent {
-    constructor(element) {
+    constructor (element) {
       super(element);
       this._parent = this._element.closest(SELECTOR_TAB_PANEL);
 
@@ -5042,7 +5051,7 @@
    */
 
   class Toast extends BaseComponent {
-    constructor(element, config) {
+    constructor (element, config) {
       super(element, config);
       this._timeout = null;
       this._hasMouseInteraction = false;

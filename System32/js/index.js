@@ -8,20 +8,20 @@ const carouselPrevious = document.getElementById('carouselPrevious');
 carouselPrevious.onclick = carouselpatch();
 carouselNext.onclick = carouselpatch();*/
 
-async function cargadoDOMindex(){
-    
+async function cargadoDOMindex() {
+
     let iFromWhileOnload = 0;
-    var intervalId = window.setInterval(function(){
+    var intervalId = window.setInterval(function () {
         // call your function here
-        
-        if (iFromWhileOnload > 30){
+
+        if (iFromWhileOnload > 30) {
             clearInterval(intervalId);
         } else {
             cargarBadges();
         }
         ++iFromWhileOnload;
-      }, 5321);
-    
+    }, 5321);
+
     /*
     do {
         setTimeout()
@@ -30,16 +30,16 @@ async function cargadoDOMindex(){
         
     } while (  iFromWhileOnload < 30);*/
 
-  
 
-    
+
+
 }
 //setTimeout(functionRef, delay, param1, param2)
 
 function cargarBadges() {
 
     console.log('cargarBadges llamada');
-    
+
     // document.getElementById('phpbadge').classList.add("active");
     const baseRoute = './Users/Santiago/credenciales/NextU/';
     const badgesObject = {
@@ -87,14 +87,14 @@ function cargarBadges() {
 
     var badge2Math = Math.floor(Math.random() * howmanybadges);
     //console.log(badge2Math);
-    
+
     badge2Math = badge1Math;
-   // console.log(badge2Math);
+    // console.log(badge2Math);
     if (badge2Math === badge1Math) {
         badge2Math = ++badge2Math;
         console.log(badge2Math);
-         var badge2 = [badgesObject[Object.keys(badgesObject)[badge2Math]].route, badgesObject[Object.keys(badgesObject)[badge2Math]].alt];
-         console.log(badge2);
+        var badge2 = [badgesObject[Object.keys(badgesObject)[badge2Math]].route, badgesObject[Object.keys(badgesObject)[badge2Math]].alt];
+        console.log(badge2);
         // console.log('2');
         // console.log(badge2);
 
@@ -117,7 +117,7 @@ function cargarBadges() {
     do {
         badge3Math = Math.floor(Math.random() * howmanybadges);
         ++iFromWhile;
-    } while ( (badge3Math === badge2Math || badge3Math === badge1Math) && iFromWhile < 10);
+    } while ((badge3Math === badge2Math || badge3Math === badge1Math) && iFromWhile < 10);
 
     if (badge3Math === badge2Math || badge3Math === badge1Math) {
         badge1Math = 2;
@@ -142,25 +142,25 @@ function cargarBadges() {
     // console.log(badge3);
 
 
-//button.setAttribute("name", "helloButton");
-if (!document.getElementById('carousel-item-3').classList.contains("active")) {
-    document.getElementById('carouselIMG3').setAttribute("src", `${baseRoute}${badge3[0]}`);
-    document.getElementById('carouselIMG3').setAttribute("alt", `${badge3[1]}`);
+    //button.setAttribute("name", "helloButton");
+    if (!document.getElementById('carousel-item-3').classList.contains("active")) {
+        document.getElementById('carouselIMG3').setAttribute("src", `${baseRoute}${badge3[0]}`);
+        document.getElementById('carouselIMG3').setAttribute("alt", `${badge3[1]}`);
 
     }
-if (!document.getElementById('carousel-item-2').classList.contains("active")) {
-document.getElementById('carouselIMG2').setAttribute("src", `${baseRoute}${badge2[0]}`);
-document.getElementById('carouselIMG1').setAttribute("alt", `${badge2[1]}`);
-}
-if (!document.getElementById('carousel-item-1').classList.contains("active")) {
-    document.getElementById('carouselIMG1').setAttribute("src", `${baseRoute}${badge1[0]}`);
-    document.getElementById('carouselIMG1').setAttribute("alt", `${badge1[1]}`);
+    if (!document.getElementById('carousel-item-2').classList.contains("active")) {
+        document.getElementById('carouselIMG2').setAttribute("src", `${baseRoute}${badge2[0]}`);
+        document.getElementById('carouselIMG1').setAttribute("alt", `${badge2[1]}`);
+    }
+    if (!document.getElementById('carousel-item-1').classList.contains("active")) {
+        document.getElementById('carouselIMG1').setAttribute("src", `${baseRoute}${badge1[0]}`);
+        document.getElementById('carouselIMG1').setAttribute("alt", `${badge1[1]}`);
 
-}
+    }
 
 
-//console.log(`${baseRoute}${badge3[0]}`)
-//console.log(`${badge3[1]}`);
+    //console.log(`${baseRoute}${badge3[0]}`)
+    //console.log(`${badge3[1]}`);
 
 }
 
@@ -170,7 +170,7 @@ cargarBadges();
 
 
 
-   
+
     //console.log(` iFromWhile: ${iFromWhile}, badge3Math: ${badge3Math}, badge2Math: badge2Math: ${badge2Math}, ${badge1Math}`);
     // 
 /*  
