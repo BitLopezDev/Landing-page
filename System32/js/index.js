@@ -10,7 +10,7 @@ carouselNext.onclick = carouselpatch();*/
 
 async function cargadoDOMindex() {
 
-    let iFromWhileOnload = 0;
+    /*let iFromWhileOnload = 0;
     var intervalId = window.setInterval(function () {
         // call your function here
 
@@ -20,7 +20,7 @@ async function cargadoDOMindex() {
             cargarBadges();
         }
         ++iFromWhileOnload;
-    }, 5321);
+    }, 5321);*/
 
     /*
     do {
@@ -461,3 +461,73 @@ function OpenModalPlatzi(course) {
     //ModalStrong
 
 }
+
+//NextCredential
+//HTMLObject
+//document.getElementById('NextCredential').addEventListener('click', fNextCredential() , false);
+
+
+
+
+function* fNextCredentialGen() {
+
+
+    let index = 1;
+    while (index <= 26) {
+        yield index++;
+
+    }
+
+
+    /* for (let value of number){
+      
+     yield value;
+    }*/
+
+
+
+
+};
+
+
+/* var arr = arreglo;
+for (let i =0; i=arr.length -1; i++){
+yield arr[i];
+ 
+}*/
+//var AllThemPDFs = [];
+//var it = fNextCredentialGen(AllThemPDFs);
+var Gen = fNextCredentialGen();
+function fNextCredential() {
+
+
+    /*for (let i=0; i <38; i++){
+      AllThemPDFs.push(i+1);
+      //console.log(`Es ${i} y luego ${i+1}`);
+    }*/
+    //console.log(AllThemPDFs);
+
+
+    //let PDFCurrent =`a (${it.next().value})`;
+    //console.log(it.next()); { value: 1, done: false }
+    //returnea 1
+
+    //Summa(it)
+
+    let GenValue = Gen.next().value;
+
+    if (GenValue === 26) {
+        document.getElementById('NextCredential').removeAttribute('onclick');
+        document.getElementById('HTMLObject').setAttribute('data', `../../Users/Santiago/credenciales/AllOfThem/pdf/a (${GenValue}).pdf`);
+        document.getElementById('NextCredential').setAttribute('onclick', `alert('Ya vio todas las credenciales');`);
+        console.log(GenValue);
+
+    } else {
+
+        document.getElementById('HTMLObject').removeAttribute('data');
+        document.getElementById('HTMLObject').setAttribute('data', `../../Users/Santiago/credenciales/AllOfThem/pdf/a (${GenValue}).pdf`);
+        console.log(GenValue);
+    }
+
+}
+

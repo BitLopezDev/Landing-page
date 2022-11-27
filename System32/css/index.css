@@ -60,6 +60,26 @@ ul li {
     margin-top: 10px;
 }
 
+.img-fluid {
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 87px;
+    min-height: 87px;
+    /* height: auto !important;
+    width: auto !important;*/
+}
+
+footer {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 110%;
+    margin-bottom: 0 !important;
+    height: 30px;
+
+
+}
+
+
 
 /*.cursoAccordion p{
     align-self: left;

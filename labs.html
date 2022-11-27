@@ -9,55 +9,20 @@
 </head>
 
 <body>
-  
 
-
-<script>
-function PlatziaccordionUI(WhatToShide) {
-    if (WhatToShide > 2) {
-        return new Error('Wrong value assigned to function PlatziaccordionUI');
+  <style>
+    .cardContainer .cardSide img {
+      max-width: 200px;
+      max-height: 200px;
+      height: auto !important;
+      width: auto !important;
     }
-    const elementsofaccordion = {
-        DesWeb: {
-            div: 'DesWeb',
-            li: 'LIDesWeb'
+  </style>
 
-        },
-        PlatziSeguridad: {
-            div: 'PlatziSeguridad',
-            li: 'LIPlatziSeguridad'
-        },
-        PlatziData: {
-            div: 'PlatziData',
-            li: 'LIPlatziData'
-        },
-    }
-    //console.log(elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].div);
-    //page-item
-    //divAccordion
-    var gradiente = `: linear-gradient(90deg, rgba(27, 164, 216, 1) 0%, rgba(67, 127, 227, 1) 35%, rgba(151, 53, 252, 1) 100%) !important;`;
-    for (let i = 0; i < 3; i++) {
-        /*let LIs = [];
-        LIs.push(elementsofaccordion[Object.keys(elementsofaccordion)[i]].li);*/
-        //console.log(LIs);
-        console.log(i);
-        //document.getElementById(LIs[i]).classList.remove('active');
-        document.getElementById(elementsofaccordion[Object.keys(elementsofaccordion)[i]].li).classList.remove('active');
-
-        document.getElementById(elementsofaccordion[Object.keys(elementsofaccordion)[i]].div).classList.add('seesconde');
-    }
-    //let itemAccoirdion = document.getElementsByClassName('itemAccoirdion');
+  <script>
 
 
-    //itemAccoirdion.classList.remove('active');
-    document.getElementById(`${elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].li}`).setAttribute('class', 'active');
-
-    //document.getElementsByClassName('divAccordion').setAttribute('class', 'seesconde');
-    document.getElementById(`${elementsofaccordion[Object.keys(elementsofaccordion)[WhatToShide]].div}`).classList.remove('seesconde');
-
-}
-
-</script>
+  </script>
 
 
 
@@ -67,8 +32,12 @@ function PlatziaccordionUI(WhatToShide) {
 
 
 
-
-
+  <center>
+    <object data="./Users/Santiago/credenciales/NextU/CertificadoWeb10243727.pdf" type="application/pdf"
+      style="width: 80% ; min-height:800px;">
+      <div>No online PDF viewer installed</div>
+    </object>
+  </center>
 </body>
 
 </html>
